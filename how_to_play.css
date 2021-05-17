@@ -1,28 +1,31 @@
+/* *（アスタリスク）は全ての要素に適用される */
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    box-sizing: border-box;
 }
 
+/* ページ全体の中央揃えをやってみる */
 body {
     margin: 0 auto;
-    max-width: 960px;    
+    max-width: 960px;
+}
+
+h1 {
+    margin: 32px 0;
 }
 
 #tableSample {
     background-image: url("./wood.jpg");
     border: 2px #121212 solid;
     table-layout: fixed;
-    border-collapse: collapse;    
-}
-
-#tableSample td, #tableSample th {
-    border: 2px #121212 solid;
+    border-collapse: collapse;
 }
 
 #tableSample td {
-    height: 32px;
     width: 32px;
+    height: 32px;
+    text-align: center;
+    border: 2px #121212 solid;
     overflow: hidden;
 }
 
@@ -31,11 +34,13 @@ body {
     height: 100%;
 }
 
+/* 横並べを実現する */
 .content {
     display: flex;
     flex-direction: row;
 }
 
+/* 縦並べを実現する */
 .sideMenu {
     display: flex;
     flex-direction: column;
